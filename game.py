@@ -1,9 +1,9 @@
 import pygame as pg
 import sys, json, os
 import random
-from settings import *
-from player import Player
-from game_objects import Platform
+from Addons.settings import *
+from Addons.player import Player
+from Addons.game_objects import Platform
 
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -32,6 +32,7 @@ while running:
 
     player.update(keys)
     player.draw(screen)
+    player.draw_coords(screen)    
 
     pg.display.update()
     clock.tick(60)
